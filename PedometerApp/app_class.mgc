@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.jiangnan.PedmeterApp.Service.Step_Service" x="209" y="9">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.jiangnan.PedmeterApp.Util.SensorUtil"
+            endpointName="SU" kind="Simple"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Util.SensorUtil"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.Util.SensorUtil" x="420" y="-34">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.jiangnan.PedmeterApp.Util.EventHandler"
+            endpointName="mHandlers" kind="Simple"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Util.EventHandler"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Application.SensorMap"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.Service.Step_Detector_Service"
+        x="523" y="318">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.jiangnan.PedmeterApp.Util.EventHandler"
+            endpointName="mHandlers" kind="Simple"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Util.EventHandler"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Application.SensorMap"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.Util.StepDetector" x="688" y="217">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="true"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.Util.AccelerationHandler"
+        x="678" y="33">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.jiangnan.PedmeterApp.Util.EventHandler"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Util.StepDetector"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.MainActivity" x="35" y="188">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.jiangnan.PedmeterApp.Util.SensorUtil"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.Util.EventHandler" x="440" y="202">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.jiangnan.PedmeterApp.Application.SensorMap" x="260" y="332">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.jiangnan.PedmeterApp.Util.EventHandler"
+            endpointName="mHandlers" kind="Simple"/>
+    </Class>
+</ClassDiagram>

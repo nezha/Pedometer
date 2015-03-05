@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/startPause"
+        android:showAsAction="never"
+        android:title="@string/pause"/>
+    <item
+        android:id="@+id/clear"
+        android:showAsAction="never"
+        android:title="@string/clear"/>
+    <item
+        android:id="@+id/settings"
+        android:showAsAction="never"
+        android:title="@string/settings"/>
+    <item
+        android:id="@+id/quit"
+        android:showAsAction="ifRoom"
+        android:title="退出"/>
+
+</menu>

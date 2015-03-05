@@ -7,6 +7,9 @@ import android.hardware.SensorManager;
 
 
 public class StepDetector{
+	/**
+	 * 初始化数据
+	 */
 
 	public static int CURRENT_SETP = 0;
 	public static float SENSITIVITY = 10; // SENSITIVITY

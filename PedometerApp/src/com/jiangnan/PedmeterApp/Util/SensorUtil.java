@@ -3,6 +3,8 @@ package com.jiangnan.PedmeterApp.Util;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.jiangnan.PedmeterApp.Application.SensorMap;
+
 import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
@@ -30,8 +32,10 @@ public class SensorUtil {
 	 */
 	public SensorUtil(Service s)
 	{
+		//当用service处理时，需要将监听变化的类写在./Service/Step_Detector_Service.java
 		sensorManager =(SensorManager)s.getSystemService(Context.SENSOR_SERVICE);
 		sensorListener = (SensorEventListener)s;
+		//sensorListener = (SensorEventListener)stepDetectorService;
 		mHandlers = new HashMap<Integer, EventHandler>();
 		
 	}
@@ -67,15 +71,18 @@ public class SensorUtil {
 	/**
 	 * 实际放入map中的是对应于不同传感器计步算法的检测类
 	 * AccelerationHandler()实现了EventHandler接口中的方法
+	 * 将SensorMap中的静态数据用于同步句柄
 	 */
 	private void registerHandlers()
 	{
 		mHandlers.put(Integer.valueOf(Sensor.TYPE_ACCELEROMETER), new AccelerationHandler());
+		SensorMap.setmHandlers(mHandlers);
 	}
 	
 	private void unregisterHandlers()
 	{
 		mHandlers.clear();
+		SensorMap.getmHandlers().clear();
 	}
 	/*
 	 * 获取属于加速度计步算法的类的实例对象
@@ -86,6 +93,8 @@ public class SensorUtil {
 		if(h != null)
 			h.service(e);
 	}
+	
+	
 	
 
 }

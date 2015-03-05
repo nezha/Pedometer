@@ -4,5 +4,10 @@
     <string name="app_name">PedometerApp</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main_page">计步程序</string>
+    <string name="step">计步</string>
+    <string name="clear">重置</string>
+    <string name="pause">Pause</string>
+    <string name="settings">设置</string>
 
 </resources>
